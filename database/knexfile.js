@@ -3,7 +3,7 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/products',
+    connection: 'postgres://localhost/lemon_aide',
     migrations: {
       directory: './db/migrations'
     },

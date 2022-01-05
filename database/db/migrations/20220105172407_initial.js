@@ -1,6 +1,6 @@
 exports.up = function(knex) {
   return knex.schema
-    .createTable('product', function(table) {//table name should be singular
+    .createTable('product', function(table) {
       table.increments('id').primary();
       table.string('name');
       table.string('color');

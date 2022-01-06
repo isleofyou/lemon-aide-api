@@ -19,7 +19,7 @@ app.get('/api/v1/all-products', async (request, response) => {
   }
 });
 
-app.post('/api/v1/favorite-product', (request, response) => {
+app.post('/api/v1/favorite-product', async (request, response) => {
   const product = request.body;
 
   if(!product.id) {

@@ -6,6 +6,10 @@ const app = express();
 
 app.set('port', process.env.PORT || 3000);
 
+app.listen(app.get('port'), () => {
+  console.log(`ProductData is running on http://localhost:${app.get('port')}.`);
+});
+
 app.get('/api/v1/all-products', async (request, response) => {
   try {
     const product = await database('product').select();
@@ -15,6 +19,6 @@ app.get('/api/v1/all-products', async (request, response) => {
   }
 });
 
-app.listen(app.get('port'), () => {
-  console.log(`ProductData is running on http://localhost:${app.get('port')}.`);
-});
+// app.post('/api/v1/favorite-product')
+
+

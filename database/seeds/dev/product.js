@@ -1,4 +1,4 @@
-const productData = require('../../../productData');
+const productData = require('../../productData');
 
 const createProduct = async (knex, product) => {
   const productId = await knex('product').insert({

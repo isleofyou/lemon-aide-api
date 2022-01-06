@@ -3,10 +3,10 @@ module.exports = {
     client: 'pg',
     connection: 'postgres://localhost/lemon_aide',
     migrations: {
-      directory: './db/migrations'
+      directory: './database/migrations'
     },
     seeds: {
-      directory: './db/seeds/dev'
+      directory: './database/seeds/dev'
     },
     useNullAsDefault: true
   }

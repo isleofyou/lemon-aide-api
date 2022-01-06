@@ -7,7 +7,7 @@ const app = express();
 app.set('port', process.env.PORT || 3001);
 
 app.listen(app.get('port'), () => {
-  console.log(`ProductData is running on http://localhost:${app.get('port')}.`);
+  console.log(`ProductData is running on https://localhost:${app.get('port')}.`);
 });
 
 app.get('/api/v1/all-products', async (request, response) => {

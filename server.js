@@ -19,6 +19,23 @@ app.get('/api/v1/all-products', async (request, response) => {
   }
 });
 
+app.post('/api/v1/favorite-product', (request, response) => {
+  const product = request.body;
+
+  if(!product.id) {
+    response
+      .status(422)
+      .send({ error: 'Id is required.'});
+  }
+
+  try {
+    const id = await database('product').insert(product, 'id');
+    response.status(201).json({ id })
+  } catch (error) {
+    response.status(500).json({ error });
+  }
+});
+
 // app.post('/api/v1/favorite-product')
 
 

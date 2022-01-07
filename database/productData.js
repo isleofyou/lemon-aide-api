@@ -108,9 +108,9 @@ let productData = [
     category: 'tops'
   },
   {
-    name: 'Love Tank',
+    name: 'Love Tank Top',
     color: 'White',
-    img_url: 'https://images.lululemon.com/is/image/lululemon/LW1CJ5S_045772_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
+    img_url: 'https://images.lululemon.com/is/image/lululemon/LW1DAGS_0002_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
     category: 'tops'
   },
   {

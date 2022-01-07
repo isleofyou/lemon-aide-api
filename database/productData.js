@@ -121,7 +121,7 @@ let productData = [
   },
   {
     name: 'Here to There High-Rise 7/8 Pant',
-    color: 'Black',
+    color: 'Heathered Black',
     img_url: 'https://images.lululemon.com/is/image/lululemon/LW5CPPS_046580_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
     category: 'bottoms'
   },
@@ -132,8 +132,8 @@ let productData = [
     category: 'bottoms'
   },
   {
-    name: 'Wunder Under Crop (High-Rise) *Full-On Luxtreme 21',
-    color: 'Dark Olive',
+    name: 'Wunder Under Crop (High-Rise)',
+    color: 'Floral Electric Multi',
     img_url: 'https://images.lululemon.com/is/image/lululemon/LW6AW6S_052541_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
     category: 'bottoms'
   },

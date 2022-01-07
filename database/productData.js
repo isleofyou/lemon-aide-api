@@ -24,9 +24,9 @@ let productData = [
     category: 'tops'  
   },
   {
-    name: 'Cut Back Crop Tank Top',
-    color: 'white',
-    img_url: 'https://shop.lululemon.com/p/women-tanks/Cut-Back-Crop-Tank-MD/_/prod8670155?color=37121',
+    name: 'lululemon Align™ Tank Top',
+    color: 'black',
+    img_url: 'https://images.lululemon.com/is/image/lululemon/LW1BSWS_0001_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
     category: 'tops'
   },
   {

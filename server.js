@@ -4,6 +4,8 @@ const database = require('knex')(configuration);
 const express = require('express');
 const app = express();
 
+app.use(express.json());
+
 app.set('port', process.env.PORT || 3000);
 
 app.listen(app.get('port'), () => {
@@ -19,23 +21,37 @@ app.get('/api/v1/all-products', async (request, response) => {
   }
 });
 
-app.post('/api/v1/favorite-product', async (request, response) => {
-  const product = request.body;
+// app.post('/api/v1/favorite-product', async (request, response) => {
+//   const product = request.body;
 
-  if(!product.id) {
-    response
-      .status(422)
-      .send({ error: 'Id is required.'});
-  }
+//   if(!product.id) {
+//     response
+//       .status(422)
+//       .send({ error: 'Id is required.'});
+//   }
 
+//   try {
+//     const id = await database('product').insert(product, 'id');
+//     response.status(201).json({ id })
+//   } catch (error) {
+//     response.status(500).json({ error });
+//   }
+// });
+
+app.put('/api/v1/favorite/:id', async (request, response) => {
   try {
-    const id = await database('product').insert(product, 'id');
-    response.status(201).json({ id })
+    const { id } = request.params;
+    const product = await database('product')
+      .where('id', '=', id)
+    const isFavorite = product[0].favorite;
+    await database('product')
+      .where('id', '=', id)
+      .update({favorite: !isFavorite});
+    response.status(201).json(product);
   } catch (error) {
-    response.status(500).json({ error });
+    response.status(500);
+    console.error(error);
   }
 });
 
-// app.post('/api/v1/favorite-product')
-
-
+// app.post('/api/v1/favorite-product');

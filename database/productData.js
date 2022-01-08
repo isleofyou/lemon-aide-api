@@ -30,39 +30,39 @@ let productData = [
     category: 'top'
   },
   {
-    name: 'lulu Align™ High-Rise Pant',
+    name: 'lulu Align™ HR Pant',
     color: 'Black',
     img_url: 'https://images.lululemon.com/is/image/lululemon/LW5CT3S_0001_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
     category: 'bottom'
   },
   {
-    name: 'Fast and Free High Rise Tight',
+    name: 'Fast and Free HR Tight',
     color: 'Dark Red',
     img_url: 'https://images.lululemon.com/is/image/lululemon/LW5BXQS_028948_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
     category: 'bottom'
   },
   {
-    name: 'Wunder Under High-Rise Tight',
+    name: 'Wunder Under HR Tight',
     color: 'Black',
     img_url: 'https://images.lululemon.com/is/image/lululemon/LW5BP4S_0001_1?wid=1080&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
     category: 'bottom'
   },
   {
-    name: 'Invigorate High-Rise',
+    name: 'Invigorate HR',
     color: 'Red Merlot',
     img_url: 'https://images.lululemon.com/is/image/lululemon/LW5CQFS_047809_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
     category: 'bottom'
   },
   {
-    name: 'Wunder Train High-Rise',
+    name: 'Wunder Train HR',
     color: 'Capture Blue',
     img_url: 'https://images.lululemon.com/is/image/lululemon/LW5CQDS_027590_1?wid=1080&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
     category: 'bottom'
   },
   {
-    name: 'Cross Paths Rucksack',
-    color: 'Green',
-    img_url: 'https://images.lululemon.com/is/image/lululemon/LW9BOJS_044629_1?wid=1080&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
+    name: 'City Adventurer Backpack',
+    color: 'Pink Savannah',
+    img_url: 'https://images.lululemon.com/is/image/lululemon/LW9DDMS_047798_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
     category: 'accessory'
   },
   {
@@ -72,14 +72,14 @@ let productData = [
     category: 'accessory'
   },
   {
-    name: 'All Hours Belt Bag',
-    color: 'Black',
-    img_url: 'https://images.lululemon.com/is/image/lululemon/LW9CJZS_028928_1?wid=1080&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
+    name: 'Everywhere Belt Bag',
+    color: 'Mulled Wine',
+    img_url: 'https://images.lululemon.com/is/image/lululemon/LW9CEYS_050420_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
     category: 'accessory'
   },
   {
     name: 'Fill your Day Backpack',
-    color: 'Brown',
+    color: 'Ocean Air',
     img_url: 'https://images.lululemon.com/is/image/lululemon/LW9CQGS_034093_1?wid=1080&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
     category: 'accessory'
   },
@@ -102,10 +102,10 @@ let productData = [
     category:'top'
   },
   {
-    name: 'Full Day Ahead Short Sleeve',
-    color: 'White',
-    img_url: 'https://images.lululemon.com/is/image/lululemon/LW3EMPS_049466_1?wid=1080&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
-    category: 'top'
+    name: 'Easy Access Crossbody Bag',
+    color: 'Black',
+    img_url: 'https://images.lululemon.com/is/image/lululemon/LU9AJJS_0001_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
+    category: 'accessory'
   },
   {
     name: 'Love Tank Top',
@@ -178,6 +178,18 @@ let productData = [
     color: 'Dark Yellow',
     img_url: 'https://images.lululemon.com/is/image/lululemon/LM9767S_045657_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
     category: 'accessory'
+  },
+  {
+    name: 'Power Pivot Ribbed Tank',
+    color: 'Night Sea',
+    img_url: 'https://images.lululemon.com/is/image/lululemon/LW1CKAS_047870_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
+    category: 'top'
+  },
+  {
+    name: 'Wunder Train HR Tight',
+    color: 'Dark Olive',
+    img_url: 'https://images.lululemon.com/is/image/lululemon/LW5CQDS_026083_1?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
+    category: 'bottom'
   }
 ];
 

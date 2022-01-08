@@ -38,20 +38,16 @@ app.get('/api/v1/all-products', async (request, response) => {
 //   }
 // });
 
-app.put('/api/v1/favorite/:id', async (request, response) => {
+app.put('/api/v1/favorites/:id', async (request, response) => {
   try {
     const { id } = request.params;
-    const product = await database('product')
-      .where('id', '=', id)
+    const product = await database('product').where('id', '=', id);
     const isFavorite = product[0].favorite;
     await database('product')
       .where('id', '=', id)
       .update({favorite: !isFavorite});
     response.status(201).json(product);
   } catch (error) {
-    response.status(500);
-    console.error(error);
+    response.status(500).json({ error })
   }
 });
-
-// app.post('/api/v1/favorite-product');

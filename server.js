@@ -27,7 +27,7 @@ app.put('/api/v1/favorites/:id', async (request, response) => {
   try {
     const { id } = request.params;
     const product = await database('product').where('id', '=', id);
-    const isFavorite = product[0].favorite;
+    const favoritePropertyOfProductFromDB = product[0].favorite;
 
     const updatedProduct = await database('product').where('id', '=', id)
       .update({ favorite: !isFavorite }, ['id', 'name', 'color', 'img_url', 'category', 'favorite']);

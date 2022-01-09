@@ -23,6 +23,15 @@ app.get('/api/v1/all-products', async (request, response) => {
   }
 });
 
+app.get('/api/v1/favorites', async (request, response) => {
+  try {
+    const favorites = await database('product').where('favorite', true);
+    response.status(200).json(favorites);
+  } catch(error) {
+    response.status(500).json({ error });
+  }
+});
+
 app.put('/api/v1/favorites/:id', async (request, response) => {
   try {
     const { id } = request.params;

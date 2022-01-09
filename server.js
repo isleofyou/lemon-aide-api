@@ -26,11 +26,11 @@ app.get('/api/v1/all-products', async (request, response) => {
 app.put('/api/v1/favorites/:id', async (request, response) => {
   try {
     const { id } = request.params;
-    const product = await database('product').where('id', '=', id);
-    const favoritePropertyOfProductFromDB = product[0].favorite;
+    const matchingProductFromDB = await database('product').where('id', '=', id);
+    const favoritePropertyOfProductFromDB = matchingProductFromDB[0].favorite;
 
     const updatedProduct = await database('product').where('id', '=', id)
-      .update({ favorite: !isFavorite }, ['id', 'name', 'color', 'img_url', 'category', 'favorite']);
+      .update({ favorite: !favoritePropertyOfProductFromDB }, ['id', 'name', 'color', 'img_url', 'category', 'favorite']);
       
     response.status(201).json(updatedProduct[0]);
   } catch (error) {

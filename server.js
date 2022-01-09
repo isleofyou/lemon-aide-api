@@ -28,9 +28,11 @@ app.put('/api/v1/favorites/:id', async (request, response) => {
     const { id } = request.params;
     const product = await database('product').where('id', '=', id);
     const isFavorite = product[0].favorite;
-    await database('product').where('id', '=', id)
-      .update({ favorite: !isFavorite });
-    response.status(201).json(product);
+
+    const updatedProduct = await database('product').where('id', '=', id)
+      .update({ favorite: !isFavorite }, ['id', 'name', 'color', 'img_url', 'category', 'favorite']);
+      
+    response.status(201).json(updatedProduct[0]);
   } catch (error) {
     response.status(500).json({ error });
   }

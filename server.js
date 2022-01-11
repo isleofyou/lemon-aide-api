@@ -55,3 +55,33 @@ app.get('/api/v1/outfits', async (request, response) => {
     return response.status(500).json({ error });
   }
 });
+
+app.post('/api/v1/outfits', async (request, response) => {
+  const outfit = request.body;
+
+  for (let requiredParameter of ['top_id', 'bottom_id']) {
+    if (!outfit[requiredParameter]) {
+      return response
+        .status(422)
+        .send({ error: `Expected format: { top_id: <number>, bottom_id: <number> }. You're missing a "${requiredParameter}" property.` });
+    }
+  }
+
+  try {
+    const existingOutfit = await database('outfit')
+      .where({
+        top_id: outfit.top_id,
+        bottom_id: outfit.bottom_id,
+        accessory_id: outfit.accessory_id
+      });
+
+    if (existingOutfit.length) {
+      return response.status(400).send({ error: `Outfit already exists` });
+    }
+
+    const id = await database('outfit').insert(outfit, 'id');
+    return response.status(201).json({ id });
+  } catch (error) {
+    return response.status(500).json({ error });
+  }
+});

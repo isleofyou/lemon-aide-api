@@ -46,3 +46,12 @@ app.put('/api/v1/favorites/:id', async (request, response) => {
     response.status(500).json({ error });
   }
 });
+
+app.get('/api/v1/outfits', async (request, response) => {
+  try {
+    const outfits = await database('outfit').select();
+    return response.status(200).json(outfits);
+  } catch(error) {
+    return response.status(500).json({ error });
+  }
+});

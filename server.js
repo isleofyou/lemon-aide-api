@@ -40,8 +40,9 @@ app.put('/api/v1/favorites/:id', async (request, response) => {
 
     const updatedProduct = await database('product').where('id', '=', id)
       .update({ favorite: !favoritePropertyOfProductFromDB }, ['id', 'name', 'color', 'img_url', 'category', 'favorite']);
-      
-    return response.status(201).json(updatedProduct[0]);
+
+    const nestedUpdatedProduct = { result: updatedProduct[0] }
+    return response.status(201).json(nestedUpdatedProduct);
   } catch (error) {
     return response.status(500).json({ error });
   }

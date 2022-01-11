@@ -86,14 +86,14 @@ app.post('/api/v1/outfits', async (request, response) => {
   }
 });
 
-// app.delete('/api/v1/outfits', async (request, response) => {
-//   try {
-//     const { id } = request.params;
-//     const deletedOutfitFromDB = await database('outfit').where('id', '=', id)
-//       .del()
+app.delete('/api/v1/outfits', async (request, response) => {
+  try {
+    const { id } = request.params;
+    const deletedOutfitFromDB = await database('outfit').where('id', '=', id)
+      .del(['id']);
       
-//     return response.status(201).json(deletedOutfitFromDB[0]);
-//   } catch (error) {
-//     return response.status(500).json({ error });
-//   }
-// });
+    return response.status(201).json(deletedOutfitFromDB[0]);
+  } catch (error) {
+    return response.status(500).json({ error });
+  }
+});

@@ -79,9 +79,9 @@ app.post('/api/v1/outfits', async (request, response) => {
     if (existingOutfit.length) {
       return response.status(400).send({ error: `Outfit already exists` });
     }
-
-    const id = await database('outfit').insert(outfit, 'id');
-    return response.status(201).json({ id });
+    
+    const newOutfit = await database('outfit').insert(outfit, ['id', 'top_id', 'bottom_id', 'accessory_id']);
+    return response.status(201).json({ newOutfit });
   } catch (error) {
     return response.status(500).json({ error });
   }

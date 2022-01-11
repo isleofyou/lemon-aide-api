@@ -85,3 +85,15 @@ app.post('/api/v1/outfits', async (request, response) => {
     return response.status(500).json({ error });
   }
 });
+
+// app.delete('/api/v1/outfits', async (request, response) => {
+//   try {
+//     const { id } = request.params;
+//     const deletedOutfitFromDB = await database('outfit').where('id', '=', id)
+//       .del()
+      
+//     return response.status(201).json(deletedOutfitFromDB[0]);
+//   } catch (error) {
+//     return response.status(500).json({ error });
+//   }
+// });

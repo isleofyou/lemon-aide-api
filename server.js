@@ -17,18 +17,18 @@ app.listen(app.get('port'), () => {
 app.get('/api/v1/all-products', async (request, response) => {
   try {
     const product = await database('product').select();
-    response.status(200).json(product);
+    return response.status(200).json(product);
   } catch(error) {
-    response.status(500).json({ error });
+    return response.status(500).json({ error });
   }
 });
 
 app.get('/api/v1/favorites', async (request, response) => {
   try {
     const favorites = await database('product').where('favorite', true);
-    response.status(200).json(favorites);
+    return response.status(200).json(favorites);
   } catch(error) {
-    response.status(500).json({ error });
+    return response.status(500).json({ error });
   }
 });
 
@@ -41,9 +41,9 @@ app.put('/api/v1/favorites/:id', async (request, response) => {
     const updatedProduct = await database('product').where('id', '=', id)
       .update({ favorite: !favoritePropertyOfProductFromDB }, ['id', 'name', 'color', 'img_url', 'category', 'favorite']);
       
-    response.status(201).json(updatedProduct[0]);
+    return response.status(201).json(updatedProduct[0]);
   } catch (error) {
-    response.status(500).json({ error });
+    return response.status(500).json({ error });
   }
 });
 

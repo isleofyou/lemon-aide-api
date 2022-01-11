@@ -89,10 +89,10 @@ app.post('/api/v1/outfits', async (request, response) => {
 app.delete('/api/v1/outfits', async (request, response) => {
   try {
     const { id } = request.params;
-    const deletedOutfitFromDB = await database('outfit').where('id', '=', id)
+    const deletedOutfitIdFromDB = await database('outfit').where('id', '=', id)
       .del(['id']);
       
-    return response.status(201).json(deletedOutfitFromDB[0]);
+    return response.status(201).json(deletedOutfitIdFromDB[0]);
   } catch (error) {
     return response.status(500).json({ error });
   }

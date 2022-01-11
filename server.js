@@ -86,7 +86,7 @@ app.post('/api/v1/outfits', async (request, response) => {
   }
 });
 
-app.delete('/api/v1/outfits', async (request, response) => {
+app.delete('/api/v1/outfits/:id', async (request, response) => {
   try {
     const { id } = request.params;
     const deletedOutfitIdFromDB = await database('outfit').where('id', '=', id)

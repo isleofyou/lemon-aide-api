@@ -9,5 +9,12 @@ module.exports = {
       directory: './database/seeds/dev'
     },
     useNullAsDefault: true
+  }, 
+  production: {
+    client: 'pg',
+    connection: {
+      connectionString: process.env.DATABASE_URL,
+      ssl: { rejectUnauthorized: false },
+    }
   }
 };

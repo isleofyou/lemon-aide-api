@@ -15,6 +15,13 @@ module.exports = {
     connection: {
       connectionString: process.env.DATABASE_URL,
       ssl: { rejectUnauthorized: false },
-    }
+    }, 
+    migrations: {
+      directory: './database/migrations'
+    },
+    seeds: {
+      directory: './database/seeds/dev'
+    },
+    useNullAsDefault: true
   }
 };
